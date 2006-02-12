@@ -1,0 +1,21 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1461
+
+This is an improved version of m4.vim.
+
+If you are using the changequote() and changecom(), you can specify
+the quote and comment delimiters just like vim modelines in the
+following way:
+
+<BLANK>vim-m4-syntax: quote=[,] comment=<!--,-->:
+
+You can specify your default delimiters at your vimrc:
+
+:let g:m4_default_quote="`,'"
+:let g:m4_default_comment='#'
+
+After the file read, you can change them in the following way:
+
+:let b:m4_quote='<<,>>'
+:let b:m4_comment=''
+:call M4UpdateSyntax()
+
